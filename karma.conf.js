@@ -17,7 +17,6 @@ module.exports = function(config) {
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      'bower_components/angular-filter/dist/angular-filter.js',
       'bower_components/rrule/lib/rrule.js',
       'dist/ac-recurrence.js',
       'test/**/*.test.js'

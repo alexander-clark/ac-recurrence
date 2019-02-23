@@ -8,18 +8,23 @@ module.exports = {
     port: 8080,
   },
   entry: {
-    'ac-recurrence': './index.js',
-    'ac-recurrence.min': './index.js'
+    'ac-recurrence': './src/index.js',
+    'ac-recurrence.min': './src/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    library: 'acRecurrence'
+    library: 'acRecurrence',
+    libraryTarget: 'umd'
   },
   externals: {
     angular: 'angular',
-    'angular-filter': 'angular.filter',
-    rrule: 'rrule'
+    rrule: {
+      commonjs: 'rrule',
+      commonjs2: 'rrule',
+      amd: 'rrule',
+      root: 'RRule'
+    }
   },
   module: {
     loaders: [

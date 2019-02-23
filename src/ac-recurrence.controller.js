@@ -1,7 +1,7 @@
 ;(function() {
   'use strict';
 
-  function acRecurrenceController(localNames, $filter, RRule) {
+  function acRecurrenceController(localNames, RRule) {
     var vm = this;
     vm.properties = {};
     vm.months = localNames.shortMonths;
@@ -90,6 +90,6 @@
     }
   }
 
-  acRecurrenceController.$inject = ['localNames', '$filter', 'RRule'];
+  acRecurrenceController.$inject = ['localNames', 'RRule'];
   angular.module('ac-recurrence').controller('acRecurrenceController', acRecurrenceController);
 })();

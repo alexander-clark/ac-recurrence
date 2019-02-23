@@ -1,5 +1,14 @@
-var acRecurrence =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("rrule"), require("angular"));
+	else if(typeof define === 'function' && define.amd)
+		define(["rrule", "angular"], factory);
+	else if(typeof exports === 'object')
+		exports["acRecurrence"] = factory(require("rrule"), require("angular"));
+	else
+		root["acRecurrence"] = factory(root["RRule"], root["angular"]);
+})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_7__) {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -70,14 +79,12 @@ var acRecurrence =
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_styles_ac_recurrence_scss__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_styles_ac_recurrence_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__src_styles_ac_recurrence_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_filter__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular_filter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ac_grid__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ac_grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ac_grid__);
-
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_ac_recurrence_scss__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__styles_ac_recurrence_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__styles_ac_recurrence_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ac_grid__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ac_grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ac_grid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rrule__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rrule___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rrule__);
 
 
 
@@ -100,14 +107,14 @@ __webpack_require__(10);
 /* 2 */
 /***/ (function(module, exports) {
 
-module.exports = angular.filter;
+!function(e){var n={};function t(r){if(n[r])return n[r].exports;var u=n[r]={i:r,l:!1,exports:{}};return e[r].call(u.exports,u,u.exports,t),u.l=!0,u.exports}t.m=e,t.c=n,t.d=function(e,n,r){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:r})},t.r=function(e){Object.defineProperty(e,"__esModule",{value:!0})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},t.p="",t(t.s=5)}([function(e,n){e.exports=angular},function(e,n,t){var r="/ac-grid.html";t(0).module("ac-grid").run(["$templateCache",function(e){e.put(r,'<div class="outer">\n  <div class="vis-hidden" ng-repeat="row in ::options | chunkBy : perRow">\n    <input id="{{\'cell-\' + $id}}" ng-model="selections[cell.value]" type="checkbox" ng-repeat-start="cell in row" ng-disabled="disabled">\n    <label for="{{\'cell-\' + $id }}" ng-repeat-end>{{ cell.label }}</label>\n  </div>\n</div>\n')}]),e.exports=r},function(e,n,t){"use strict";var r,u=(r=t(1))&&r.__esModule?r:{default:r};function o(){function e(e){var n={};return(e||[]).map(function(e){n[e]=!0}),n}function n(e){var n=[];for(var t in e.selections)!0===e.selections[t]&&n.push(t);return n}return{link:function(t,r,u,o){o.$formatters.push(e),o.$parsers.push(n),o.$render=function(){t.selections=o.$viewValue},t.$watch("selections",function(){var e=t.selections||{};o.$setViewValue({selections:e})},!0)},require:"ngModel",restrict:"E",scope:{disabled:"<",ngModel:"=",options:"<",perRow:"<"},templateUrl:u.default}}Object.defineProperty(n,"__esModule",{value:!0}),n.default=o,angular.module("ac-grid").directive("acGrid",o)},function(e,n,t){"use strict";angular.module("ac-grid").filter("chunkBy",function(){return e=function(e,n){return e.reduce(function(e,t,r){return 0==r%n?e.push([t]):e[Math.floor(r/n)].push(t),e},[])},n={},function(){for(var t=arguments.length,r=Array(t),u=0;u<t;u++)r[u]=arguments[u];if(r in n)return n[r];var o=e.apply(void 0,r);return n[r]=o,o};var e,n})},function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var r=angular.module("ac-grid",[]);n.default=r},function(e,n,t){"use strict";t(10),t(4),t(3),t(2)},,,,,function(e,n){}]);
+//# sourceMappingURL=ac-grid.js.map
 
 /***/ }),
 /* 3 */
 /***/ (function(module, exports) {
 
-!function(e){var n={};function t(r){if(n[r])return n[r].exports;var o=n[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,t),o.l=!0,o.exports}t.m=e,t.c=n,t.d=function(e,n,r){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:r})},t.r=function(e){Object.defineProperty(e,"__esModule",{value:!0})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},t.p="",t(t.s=5)}([function(e,n){e.exports=angular},function(e,n,t){var r="/ac-grid.html";t(0).module("ac-grid").run(["$templateCache",function(e){e.put(r,'<div class="outer">\n  <div class="vis-hidden" ng-repeat="row in ::options | chunkBy : perRow">\n    <input id="{{\'cell-\' + $id}}" ng-model="selections[cell.value]" type="checkbox" ng-repeat-start="cell in row">\n    <label for="{{\'cell-\' + $id }}" ng-repeat-end>{{ cell.label }}</label>\n  </div>\n</div>\n')}]),e.exports=r},function(e,n,t){"use strict";var r,o=(r=t(1))&&r.__esModule?r:{default:r};function u(){function e(e){var n={};return(e||[]).map(function(e){n[e]=!0}),n}function n(e){var n=[];for(var t in e.selections)!0===e.selections[t]&&n.push(t);return n}return{link:function(t,r,o,u){u.$formatters.push(e),u.$parsers.push(n),u.$render=function(){t.selections=u.$viewValue},t.$watch("selections",function(){var e=t.selections||{};u.$setViewValue({selections:e})},!0)},require:"ngModel",restrict:"E",scope:{ngModel:"=",options:"<",perRow:"<"},templateUrl:o.default}}Object.defineProperty(n,"__esModule",{value:!0}),n.default=u,angular.module("ac-grid").directive("acGrid",u)},function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var r=angular.module("ac-grid",["angular.filter"]);n.default=r},function(e,n){e.exports=angular.filter},function(e,n,t){"use strict";t(10),t(4),t(3),t(2)},,,,,function(e,n){}]);
-//# sourceMappingURL=ac-grid.js.map
+module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
 
 /***/ }),
 /* 4 */
@@ -116,7 +123,7 @@ module.exports = angular.filter;
 ;(function() {
   'use strict';
 
-  angular.module('ac-recurrence', ['ac-grid', 'angular.filter']);
+  angular.module('ac-recurrence', ['ac-grid']);
 })();
 
 
@@ -146,7 +153,7 @@ module.exports = path;
 /* 7 */
 /***/ (function(module, exports) {
 
-module.exports = angular;
+module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
 
 /***/ }),
 /* 8 */
@@ -303,7 +310,7 @@ module.exports = angular;
 ;(function() {
   'use strict';
 
-  function acRecurrenceController(localNames, $filter, RRule) {
+  function acRecurrenceController(localNames, RRule) {
     var vm = this;
     vm.properties = {};
     vm.months = localNames.shortMonths;
@@ -392,10 +399,11 @@ module.exports = angular;
     }
   }
 
-  acRecurrenceController.$inject = ['localNames', '$filter', 'RRule'];
+  acRecurrenceController.$inject = ['localNames', 'RRule'];
   angular.module('ac-recurrence').controller('acRecurrenceController', acRecurrenceController);
 })();
 
 
 /***/ })
 /******/ ]);
+});

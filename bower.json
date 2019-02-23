@@ -25,7 +25,7 @@
     "angular-mocks": "^1.6.4"
   },
   "dependencies": {
-    "angular-filter": "^0.5.15",
-    "rrule": "^2.2.0"
+    "ac-grid": "^0.2.0",
+    "rrule": "^2.1.0"
   }
 }
