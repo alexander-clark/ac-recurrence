@@ -8,8 +8,8 @@ module.exports = {
     port: 8080,
   },
   entry: {
-    'ac-recurrence': './src/index.js',
-    'ac-recurrence.min': './src/index.js'
+    'ac-recurrence': './index.js',
+    'ac-recurrence.min': './index.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
